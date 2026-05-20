@@ -3,25 +3,27 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
+  >
 
   <title>
     Mohammed Mudasir Ali Siddiqui | Portfolio
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
 
   <!-- Remix Icons -->
+
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
     rel="stylesheet"
-  />
+  >
 
 </head>
 
@@ -32,7 +34,9 @@
   ========================== -->
 
   <div class="preloader">
+
     <div class="loader"></div>
+
   </div>
 
   <!-- =========================
@@ -42,89 +46,110 @@
   <div class="cursor-glow"></div>
 
   <!-- =========================
-       THEME TOGGLE
+       HEADER
   ========================== -->
 
-  <button class="theme-toggle">
-    ☀
-  </button>
+  <header class="header">
+
+    <a href="#" class="logo">
+      Mudasir
+    </a>
+
+    <nav class="navbar">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <button class="theme-toggle">
+      ☀
+    </button>
+
+  </header>
 
   <!-- =========================
        HOME SECTION
   ========================== -->
 
-  <section class="home">
+  <section class="home" id="home">
 
     <div class="home-content">
 
-      <!-- Profile Image -->
+      <div class="home-text">
 
-      <img
-        src="IMG_20260520_115827.png"
-        alt="Mudasir"
-        class="profile-img"
-      />
+        <h3>Hello, I'm</h3>
 
-      <!-- Name -->
+        <h1>
+          Mohammed Mudasir
+          Ali Siddiqui
+        </h1>
 
-      <h1>
-        Mohammed Mudasir <br />
-        Ali Siddiqui
-      </h1>
+        <div class="typing-container">
 
-      <!-- Typing Animation -->
+          I'm a
+          <span class="typing-text"></span>
 
-      <div class="typing-container">
-        I'm a
-        <span class="typing-text"></span>
+        </div>
+
+        <p>
+
+          Passionate Electronics and Communication
+          Engineering student with strong knowledge
+          in embedded systems, automation systems,
+          digital electronics, and software development.
+
+        </p>
+
+        <div class="home-buttons">
+
+          <a href="#projects" class="btn primary-btn">
+            View Projects
+          </a>
+
+          <a
+            href="MUDASIR CV.pdf"
+            download
+            class="btn secondary-btn"
+          >
+            Download Resume
+          </a>
+
+        </div>
+
+        <div class="social-icons">
+
+          <a href="#">
+            <i class="ri-github-fill"></i>
+          </a>
+
+          <a href="#">
+            <i class="ri-linkedin-box-fill"></i>
+          </a>
+
+          <a
+            href="mailto:mdmudasiralisiddiqui@gmail.com"
+          >
+            <i class="ri-mail-fill"></i>
+          </a>
+
+        </div>
+
       </div>
 
-      <!-- Description -->
+      <div class="home-image">
 
-      <p>
-        Passionate Electronics and Communication Engineering student
-        with strong knowledge in embedded systems, digital electronics,
-        automation systems, and software development.
-
-        Skilled in C Programming, Basic Python, LabVIEW,
-        MULTISIM, circuit design, and embedded technologies.
-      </p>
-
-      <!-- Buttons -->
-
-      <div class="home-buttons">
-
-        <a href="#about" class="btn primary-btn">
-          About Me
-        </a>
-
-        <a
-          href="MUDASIR CV.pdf"
-          download
-          class="btn secondary-btn"
+        <img
+          src="IMG_20260520_115827.png"
+          alt="Profile"
         >
-          Download Resume
-        </a>
-
-      </div>
-
-      <!-- Social Icons -->
-
-      <div class="social-icons">
-
-        <a href="#">
-          <i class="ri-github-fill"></i>
-        </a>
-
-        <a href="#">
-          <i class="ri-linkedin-box-fill"></i>
-        </a>
-
-        <a
-          href="mailto:mdmudasiralisiddiqui@gmail.com"
-        >
-          <i class="ri-mail-fill"></i>
-        </a>
 
       </div>
 
@@ -139,26 +164,40 @@
   <section class="about" id="about">
 
     <div class="section-title">
+
       <h2>About Me</h2>
+
     </div>
 
-    <div class="about-card">
+    <div class="about-container">
 
-      <p>
-        I am currently pursuing Bachelor of Electronics and
-        Communication Engineering at Vardhaman College
-        of Engineering.
+      <div class="about-card">
 
-        I completed my Diploma in ECE from Government
-        Polytechnic Siddipet with a CGPA of 9.43.
-      </p>
+        <p>
 
-      <p>
-        I have strong interest in embedded systems,
-        automation, electronic circuits, and smart
-        engineering solutions that integrate both
-        hardware and software technologies.
-      </p>
+          I am currently pursuing Bachelor of
+          Electronics and Communication Engineering
+          at Vardhaman College of Engineering.
+
+        </p>
+
+        <p>
+
+          I completed my Diploma in ECE from
+          Government Polytechnic Siddipet
+          with a CGPA of 9.43.
+
+        </p>
+
+        <p>
+
+          I have strong interest in embedded systems,
+          automation, electronic circuits,
+          and smart engineering solutions.
+
+        </p>
+
+      </div>
 
     </div>
 
@@ -168,10 +207,12 @@
        SKILLS SECTION
   ========================== -->
 
-  <section class="skills">
+  <section class="skills" id="skills">
 
     <div class="section-title">
+
       <h2>Skills</h2>
+
     </div>
 
     <div class="skills-container">
@@ -205,15 +246,15 @@
       </div>
 
       <div class="skill-card">
+        Project Management
+      </div>
+
+      <div class="skill-card">
         Teamwork
       </div>
 
       <div class="skill-card">
         Critical Thinking
-      </div>
-
-      <div class="skill-card">
-        Project Management
       </div>
 
     </div>
@@ -224,13 +265,15 @@
        PROJECTS SECTION
   ========================== -->
 
-  <section class="projects">
+  <section class="projects" id="projects">
 
     <div class="section-title">
+
       <h2>Projects</h2>
+
     </div>
 
-    <div class="project-container">
+    <div class="projects-container">
 
       <div class="project-card">
 
@@ -239,10 +282,11 @@
         </h3>
 
         <p>
+
           Smart traffic control system designed
           for emergency vehicles like ambulances
-          and fire trucks to reduce congestion
-          and improve emergency response.
+          and fire trucks to reduce congestion.
+
         </p>
 
       </div>
@@ -254,9 +298,11 @@
         </h3>
 
         <p>
-          Automatic gas leakage detection system
-          capable of triggering alarms and turning
-          off gas regulator for improved safety.
+
+          Automatic gas leakage detection
+          system capable of turning off
+          gas regulator and triggering alarms.
+
         </p>
 
       </div>
@@ -266,65 +312,15 @@
   </section>
 
   <!-- =========================
-       INTERNSHIP SECTION
-  ========================== -->
-
-  <section class="internship">
-
-    <div class="section-title">
-      <h2>Internship</h2>
-    </div>
-
-    <div class="internship-card">
-
-      <h3>
-        Innohub | Chinthavari Innovation Pvt Ltd
-      </h3>
-
-      <span>
-        May 2024 – November 2024
-      </span>
-
-      <p>
-        Worked on electronic device circuit
-        preparation and gained practical exposure
-        to industrial hardware implementation
-        and troubleshooting.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       ACHIEVEMENT SECTION
-  ========================== -->
-
-  <section class="achievement">
-
-    <div class="section-title">
-      <h2>Achievement</h2>
-    </div>
-
-    <div class="achievement-card">
-
-      <p>
-        Awarded State 1st by Government of
-        Telangana in Surjana Tech Fest.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
        CONTACT SECTION
   ========================== -->
 
-  <section class="contact">
+  <section class="contact" id="contact">
 
     <div class="section-title">
+
       <h2>Contact</h2>
+
     </div>
 
     <div class="contact-card">
@@ -358,6 +354,7 @@
   </footer>
 
   <!-- JS -->
+
   <script src="script.js"></script>
 
 </body>
