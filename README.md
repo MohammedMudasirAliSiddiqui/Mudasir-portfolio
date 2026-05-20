@@ -39,8 +39,8 @@ Mudasir-portfolio/
 ├── script.js
 ├── README.md
 │
-├── IMG_20260520_115827.png
-├── MUDASIR CV.pdf
+├── profile.png
+├── MUDASIR_CV.pdf
 ```
 
 ---
