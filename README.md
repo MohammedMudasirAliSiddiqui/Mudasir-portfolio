@@ -1,34 +1,21 @@
-# Mohammed Mudasir Ali Siddiqui — Portfolio Website
+# Mohammed Mudasir Ali Siddiqui — Portfolio
 
-A modern glassmorphism portfolio website built using HTML, CSS, and JavaScript.
-
-## 🚀 Features
-
-- Premium Glassmorphism UI
-- Dark / Light Theme Toggle
-- Animated Typing Effect
-- Interactive Cursor Glow
-- Responsive Design
-- Smooth Hover Animations
-- Preloader Animation
-- Resume Download Button
-- Social Media Icons
+A modern futuristic glassmorphism portfolio website built using HTML, CSS, and JavaScript.
 
 ---
 
-# 📂 Project Structure
+# 🚀 Features
 
-```bash
-portfolio/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── assets/
-│   ├── profile.jpg
-│   ├── MUDASIR_CV.pdf
-```
+- Premium Glassmorphism UI
+- Cosmic Background Effects
+- Dark / Light Theme
+- Animated Typing Effect
+- Interactive Cursor Glow
+- Responsive Design
+- Hover Animations
+- Resume Download Button
+- Smooth Scrolling Navigation
+- Modern Portfolio Layout
 
 ---
 
@@ -42,36 +29,36 @@ portfolio/
 
 ---
 
-# 📸 Sections Included
+# 📂 Project Structure
 
-- Home Section
-- Hero Banner
-- Typing Animation
-- Social Media Links
-- Resume Download
-- Theme Toggle
-
----
-
-# 📧 Contact
-
-## Mohammed Mudasir Ali Siddiqui
-
-- Email:
-  mdmudasiralisiddiqui@gmail.com
-
-- Location:
-  Hyderabad, Telangana, India
+```bash
+Mudasir-portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+│
+├── IMG_20260520_115827.png
+├── MUDASIR CV.pdf
+```
 
 ---
 
-# ⭐ Portfolio Highlights
+# 📸 Portfolio Sections
 
-- Electronics & Communication Engineering Student
-- Embedded Systems Enthusiast
-- Circuit Design Projects
-- Intelligent Traffic Control System
-- LPG Gas Leakage Detector
+- Home
+- About
+- Skills
+- Projects
+- Internship
+- Contact
+
+---
+
+# 👨‍💻 About Me
+
+Electronics and Communication Engineering student passionate about embedded systems, automation systems, digital electronics, and smart engineering solutions.
 
 ---
 
@@ -81,9 +68,13 @@ Awarded State 1st by Government of Telangana in Surjana Tech Fest.
 
 ---
 
-# 📄 License
+# 📧 Contact
 
-This project is open-source and free to use.
+- Email:
+  mdmudasiralisiddiqui@gmail.com
+
+- Location:
+  Hyderabad, Telangana, India
 
 ---
 
