@@ -28,6 +28,7 @@ const words = [
   "Tech Innovator"
 
 ];
+
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -42,15 +43,17 @@ function typeEffect(){
 
   if(isDeleting){
 
-    typingText.textContent =
-      currentWord.substring(0,charIndex--);
+    charIndex--;
 
   }else{
 
-    typingText.textContent =
-      currentWord.substring(0,charIndex++);
+    charIndex++;
 
   }
+
+  typingText.textContent =
+
+    currentWord.substring(0,charIndex);
 
   let speed = isDeleting ? 60 : 120;
 
@@ -61,10 +64,8 @@ function typeEffect(){
 
     isDeleting = true;
 
-  }
-
-  if(isDeleting &&
-     charIndex === 0){
+  }else if(isDeleting &&
+           charIndex === 0){
 
     isDeleting = false;
 
