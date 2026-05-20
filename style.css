@@ -566,3 +566,83 @@ footer{
   }
 
 }
+/* =========================
+   EDUCATION
+========================= */
+
+.education-container,
+.certification-container{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
+}
+
+.education-card,
+.certification-card,
+.achievement-card{
+
+  padding:35px;
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:25px;
+
+  backdrop-filter:blur(15px);
+
+  transition:0.4s ease;
+}
+
+.education-card:hover,
+.certification-card:hover,
+.achievement-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.25);
+
+}
+
+.education-card h3,
+.internship-card h3{
+
+  color:#00e5ff;
+
+  margin-bottom:15px;
+}
+
+.education-card span,
+.internship-card span{
+
+  color:#cbd5e1;
+
+  display:block;
+
+  margin-bottom:15px;
+}
+
+.education-card p,
+.internship-card p,
+.achievement-card p{
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+.certification-card{
+
+  text-align:center;
+
+  font-weight:600;
+}
+
+.achievement-card{
+
+  text-align:center;
+}
