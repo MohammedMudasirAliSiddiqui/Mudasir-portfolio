@@ -35,8 +35,12 @@ body.light-theme .header,
 body.light-theme .about-card,
 body.light-theme .project-card,
 body.light-theme .contact-card,
-body.light-theme .skill-card{
-  background:rgba(255,255,255,0.55);
+body.light-theme .skill-card,
+body.light-theme .education-card,
+body.light-theme .certification-card,
+body.light-theme .achievement-card,
+body.light-theme .internship-card{
+  background:rgba(255,255,255,0.6);
   color:#111827;
 }
 
@@ -70,11 +74,9 @@ body.light-theme .skill-card{
 }
 
 @keyframes spin{
-
   100%{
     transform:rotate(360deg);
   }
-
 }
 
 /* =========================
@@ -149,7 +151,8 @@ body.light-theme .skill-card{
   transition:0.3s ease;
 }
 
-.navbar a:hover{
+.navbar a:hover,
+.navbar a.active{
   color:#00e5ff;
 }
 
@@ -253,14 +256,12 @@ body.light-theme .skill-card{
   font-size:1.05rem;
 }
 
-.home-image{
-  flex:1;
+/* =========================
+   PROFILE IMAGE
+========================= */
 
-  display:flex;
-  justify-content:center;
-}
+.profile-img{
 
-.home-image img{
   width:350px;
   height:350px;
 
@@ -277,7 +278,8 @@ body.light-theme .skill-card{
   transition:0.4s ease;
 }
 
-.home-image img:hover{
+.profile-img:hover{
+
   transform:scale(1.05);
 
   box-shadow:
@@ -403,14 +405,18 @@ section{
 }
 
 /* =========================
-   CARDS
+   GLASS CARDS
 ========================= */
 
 .about-card,
 .contact-card,
 .project-card,
 .skill-card,
-.internship-card{
+.internship-card,
+.education-card,
+.certification-card,
+.achievement-card{
+
   background:rgba(255,255,255,0.05);
 
   border:1px solid rgba(255,255,255,0.08);
@@ -424,18 +430,25 @@ section{
 
 .about-card,
 .contact-card,
-.internship-card{
+.internship-card,
+.education-card,
+.achievement-card{
   padding:40px;
 }
 
 .about-card:hover,
 .contact-card:hover,
 .project-card:hover,
-.skill-card:hover{
+.skill-card:hover,
+.education-card:hover,
+.certification-card:hover,
+.achievement-card:hover,
+.internship-card:hover{
+
   transform:translateY(-8px);
 
   box-shadow:
-  0 0 40px rgba(0,229,255,0.2);
+  0 0 40px rgba(0,229,255,0.25);
 }
 
 /* =========================
@@ -498,6 +511,62 @@ section{
 }
 
 /* =========================
+   EDUCATION
+========================= */
+
+.education-container,
+.certification-container{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
+}
+
+.education-card h3,
+.internship-card h3{
+
+  color:#00e5ff;
+
+  margin-bottom:15px;
+}
+
+.education-card span,
+.internship-card span{
+
+  color:#cbd5e1;
+
+  display:block;
+
+  margin-bottom:15px;
+}
+
+.education-card p,
+.internship-card p,
+.achievement-card p{
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+.certification-card{
+
+  padding:35px;
+
+  text-align:center;
+
+  font-weight:600;
+}
+
+.achievement-card{
+
+  text-align:center;
+}
+
+/* =========================
    CONTACT
 ========================= */
 
@@ -556,7 +625,7 @@ footer{
     display:none;
   }
 
-  .home-image img{
+  .profile-img{
     width:260px;
     height:260px;
   }
@@ -565,84 +634,4 @@ footer{
     font-size:2.2rem;
   }
 
-}
-/* =========================
-   EDUCATION
-========================= */
-
-.education-container,
-.certification-container{
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(300px,1fr));
-
-  gap:30px;
-}
-
-.education-card,
-.certification-card,
-.achievement-card{
-
-  padding:35px;
-
-  background:rgba(255,255,255,0.05);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  border-radius:25px;
-
-  backdrop-filter:blur(15px);
-
-  transition:0.4s ease;
-}
-
-.education-card:hover,
-.certification-card:hover,
-.achievement-card:hover{
-
-  transform:translateY(-8px);
-
-  box-shadow:
-  0 0 40px rgba(0,229,255,0.25);
-
-}
-
-.education-card h3,
-.internship-card h3{
-
-  color:#00e5ff;
-
-  margin-bottom:15px;
-}
-
-.education-card span,
-.internship-card span{
-
-  color:#cbd5e1;
-
-  display:block;
-
-  margin-bottom:15px;
-}
-
-.education-card p,
-.internship-card p,
-.achievement-card p{
-
-  color:#cbd5e1;
-
-  line-height:1.8;
-}
-
-.certification-card{
-
-  text-align:center;
-
-  font-weight:600;
-}
-
-.achievement-card{
-
-  text-align:center;
 }
