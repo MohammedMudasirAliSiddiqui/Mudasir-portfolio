@@ -211,6 +211,12 @@ body.light-theme .internship-card{
   gap:80px;
 }
 
+.home-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .home-text{
   flex:1;
 }
