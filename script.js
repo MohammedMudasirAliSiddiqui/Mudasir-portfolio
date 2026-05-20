@@ -60,7 +60,7 @@ function typeEffect(){
   if(!isDeleting &&
      charIndex === currentWord.length){
 
-    speed = 1500;
+    speed = 3000;
 
     isDeleting = true;
 
