@@ -22,13 +22,12 @@ window.addEventListener("load", () => {
 const words = [
 
   "ECE Student",
-  "Embedded Engineer",
+  "Embedded Systems Enthusiast",
   "Circuit Designer",
-  "Hardware Enthusiast",
-  "Future Innovator"
+  "Future Engineer",
+  "Tech Innovator"
 
 ];
-
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -180,10 +179,13 @@ const revealElements =
     ".about-card,\
      .skill-card,\
      .project-card,\
-     .contact-card"
+     .contact-card,\
+     .education-card,\
+     .certification-card,\
+     .achievement-card,\
+     .internship-card"
 
   );
-
 function revealOnScroll(){
 
   revealElements.forEach((element)=>{
