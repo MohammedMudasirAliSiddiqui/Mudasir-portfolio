@@ -664,3 +664,114 @@ footer{
   }
 
 }
+/* =========================
+   EDUCATION TIMELINE
+========================= */
+
+.timeline{
+
+  position:relative;
+
+  max-width:900px;
+
+  margin:auto;
+
+  padding-left:40px;
+
+  border-left:3px solid rgba(0,229,255,0.4);
+}
+
+.timeline-item{
+
+  position:relative;
+
+  margin-bottom:50px;
+}
+
+.timeline-dot{
+
+  position:absolute;
+
+  left:-52px;
+
+  top:10px;
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:#00e5ff;
+
+  box-shadow:
+  0 0 20px rgba(0,229,255,0.9);
+}
+
+.timeline-content{
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:20px;
+
+  padding:30px;
+
+  transition:0.4s ease;
+}
+
+.timeline-content:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 0 35px rgba(0,229,255,0.2);
+}
+
+.timeline-content h3{
+
+  color:#00e5ff;
+
+  margin-bottom:10px;
+
+  font-size:1.3rem;
+}
+
+.timeline-content span{
+
+  display:block;
+
+  color:#cbd5e1;
+
+  margin-bottom:12px;
+}
+
+.timeline-content p{
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .timeline{
+
+    padding-left:25px;
+  }
+
+  .timeline-dot{
+
+    left:-37px;
+
+    width:18px;
+    height:18px;
+  }
+
+}
