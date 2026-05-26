@@ -16,9 +16,19 @@ html{
 }
 
 body{
-  background:#050816;
+
+  background:
+  linear-gradient(
+    135deg,
+    #050816,
+    #0a1128,
+    #050816
+  );
+
   color:white;
+
   overflow-x:hidden;
+
   transition:0.4s ease;
 }
 
@@ -27,7 +37,9 @@ body{
 ========================= */
 
 body.light-theme{
+
   background:#edf3ff;
+
   color:#111827;
 }
 
@@ -40,7 +52,7 @@ body.light-theme .timeline-content,
 body.light-theme .internship-card,
 body.light-theme .certification-card{
 
-  background:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.75);
 
   color:#111827;
 }
@@ -50,19 +62,24 @@ body.light-theme .certification-card{
 ========================= */
 
 .preloader{
+
   position:fixed;
+
   inset:0;
 
   background:#050816;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   z-index:9999;
 }
 
 .loader{
+
   width:80px;
   height:80px;
 
@@ -76,7 +93,9 @@ body.light-theme .certification-card{
 }
 
 .preloader.hide{
+
   opacity:0;
+
   visibility:hidden;
 
   transition:1s ease;
@@ -95,6 +114,7 @@ body.light-theme .certification-card{
 ========================= */
 
 .cursor-glow{
+
   position:fixed;
 
   width:300px;
@@ -124,6 +144,7 @@ body.light-theme .certification-card{
 ========================= */
 
 .header{
+
   position:fixed;
 
   top:0;
@@ -134,7 +155,9 @@ body.light-theme .certification-card{
   padding:20px 10%;
 
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
 
   background:rgba(255,255,255,0.05);
@@ -148,7 +171,9 @@ body.light-theme .certification-card{
 }
 
 .logo{
+
   font-size:1.8rem;
+
   font-weight:700;
 
   color:#00e5ff;
@@ -157,11 +182,16 @@ body.light-theme .certification-card{
 }
 
 .navbar{
+
   display:flex;
+
   gap:30px;
+
+  flex-wrap:wrap;
 }
 
 .navbar a{
+
   color:white;
 
   text-decoration:none;
@@ -182,6 +212,7 @@ body.light-theme .certification-card{
 ========================= */
 
 .theme-toggle{
+
   width:55px;
   height:55px;
 
@@ -215,10 +246,13 @@ body.light-theme .certification-card{
 ========================= */
 
 .home{
+
   min-height:100vh;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   padding:120px 10%;
@@ -240,7 +274,10 @@ body.light-theme .certification-card{
 }
 
 .home-text{
+
   flex:1;
+
+  max-width:650px;
 }
 
 .home-text h3{
@@ -281,6 +318,7 @@ body.light-theme .certification-card{
 }
 
 .typing-text{
+
   color:#00e5ff;
 }
 
@@ -296,7 +334,7 @@ body.light-theme .certification-card{
 }
 
 /* =========================
-   HOME IMAGE
+   PROFILE IMAGE
 ========================= */
 
 .home-image{
@@ -328,8 +366,10 @@ body.light-theme .certification-card{
 
 .profile-img{
 
-  width:360px;
-  height:360px;
+  width:320px;
+  height:320px;
+
+  margin-top:30px;
 
   object-fit:cover;
 
@@ -365,6 +405,7 @@ body.light-theme .certification-card{
   margin-top:35px;
 
   display:flex;
+
   gap:20px;
 
   flex-wrap:wrap;
@@ -428,6 +469,7 @@ body.light-theme .certification-card{
   margin-top:35px;
 
   display:flex;
+
   gap:20px;
 }
 
@@ -437,7 +479,9 @@ body.light-theme .certification-card{
   height:55px;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   border-radius:50%;
@@ -495,7 +539,6 @@ section{
 
 .about-card,
 .contact-card,
-.project-card,
 .skill-card,
 .internship-card,
 .certification-card{
@@ -514,12 +557,12 @@ section{
 .about-card,
 .contact-card,
 .internship-card{
+
   padding:40px;
 }
 
 .about-card:hover,
 .contact-card:hover,
-.project-card:hover,
 .skill-card:hover,
 .timeline-content:hover,
 .certification-card:hover,
@@ -568,87 +611,126 @@ section{
 }
 
 /* =========================
-   PROJECTS
+   MODERN PROJECTS
 ========================= */
 
-.projects-container{
+.projects-wrapper{
 
-  display:grid;
+  display:flex;
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(350px,1fr));
+  flex-direction:column;
 
-  gap:35px;
+  gap:100px;
 }
 
-.project-card{
+.modern-project-card{
 
-  overflow:hidden;
+  display:flex;
 
-  position:relative;
-}
+  align-items:center;
 
-.project-img{
+  justify-content:space-between;
 
-  width:100%;
+  gap:60px;
 
-  height:240px;
-
-  object-fit:cover;
+  flex-wrap:wrap;
 
   transition:0.4s ease;
 }
 
-.project-card:hover .project-img{
+.modern-project-card:hover{
 
-  transform:scale(1.05);
+  transform:translateY(-8px);
 }
 
-.project-content{
+.modern-project-card.reverse{
 
-  padding:30px;
+  flex-direction:row-reverse;
 }
 
-.project-content h3{
+.modern-project-image{
+
+  flex:1;
+}
+
+.modern-project-image img{
+
+  width:100%;
+
+  height:350px;
+
+  object-fit:cover;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.15);
+
+  transition:0.4s ease;
+}
+
+.modern-project-image img:hover{
+
+  transform:scale(1.03);
+
+  box-shadow:
+  0 0 60px rgba(0,229,255,0.3);
+}
+
+.modern-project-content{
+
+  flex:1;
+}
+
+.project-number{
+
+  font-size:5rem;
+
+  font-weight:800;
+
+  color:rgba(255,255,255,0.08);
+
+  line-height:1;
+}
+
+.modern-project-content h3{
+
+  font-size:2rem;
+
+  margin:20px 0;
 
   color:#00e5ff;
-
-  margin-bottom:15px;
-
-  font-size:1.4rem;
 }
 
-.project-content p{
+.modern-project-content p{
 
   color:#cbd5e1;
 
-  line-height:1.8;
+  line-height:1.9;
 
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
-/* =========================
-   PROJECT TAGS
-========================= */
-
-.project-tech{
+.modern-project-tech{
 
   display:flex;
 
   flex-wrap:wrap;
 
-  gap:12px;
+  gap:15px;
+
+  margin-top:25px;
 }
 
-.project-tech span{
+.modern-project-tech span{
 
   padding:10px 18px;
 
-  background:rgba(0,229,255,0.1);
-
-  border:1px solid rgba(0,229,255,0.2);
-
   border-radius:50px;
+
+  background:rgba(0,229,255,0.08);
+
+  border:1px solid rgba(0,229,255,0.15);
 
   color:#00e5ff;
 
@@ -657,7 +739,7 @@ section{
   transition:0.3s ease;
 }
 
-.project-tech span:hover{
+.modern-project-tech span:hover{
 
   background:#00e5ff;
 
@@ -800,7 +882,17 @@ section{
 ========================= */
 
 .contact-card{
+
   text-align:center;
+}
+
+.contact-card h3{
+
+  font-size:2rem;
+
+  margin-bottom:20px;
+
+  color:#00e5ff;
 }
 
 .contact-card p{
@@ -855,6 +947,22 @@ footer{
     font-size:3rem;
   }
 
+  .modern-project-card,
+  .modern-project-card.reverse{
+
+    flex-direction:column;
+  }
+
+  .modern-project-content{
+
+    text-align:center;
+  }
+
+  .modern-project-tech{
+
+    justify-content:center;
+  }
+
 }
 
 @media(max-width:768px){
@@ -870,6 +978,7 @@ footer{
   }
 
   .section-title h2{
+
     font-size:2.2rem;
   }
 
@@ -889,6 +998,11 @@ footer{
 
     width:18px;
     height:18px;
+  }
+
+  .project-number{
+
+    font-size:4rem;
   }
 
 }
