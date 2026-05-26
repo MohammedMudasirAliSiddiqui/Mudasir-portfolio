@@ -1,13 +1,8 @@
-/* =========================================
-   UPDATED ELECTRONICS ENGINEER PORTFOLIO
-   MODERN CYBER / AI / ECE THEME
-========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-/* =========================================
-   GLOBAL
-========================================= */
+/* =========================
+   GLOBAL STYLES
+========================= */
 
 *{
   margin:0;
@@ -21,22 +16,70 @@ html{
 }
 
 body{
-
-  background:
-  radial-gradient(circle at top left,#081225,#050816 45%);
-
+  background:#050816;
   color:white;
-
   overflow-x:hidden;
-
   transition:0.4s ease;
-
-  position:relative;
 }
 
-/* =========================================
-   CYBER GRID BACKGROUND
-========================================= */
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light-theme{
+  background:#edf3ff;
+  color:#111827;
+}
+
+body.light-theme .header,
+body.light-theme .about-card,
+body.light-theme .project-card,
+body.light-theme .contact-info-card,
+body.light-theme .skill-card,
+body.light-theme .timeline-content,
+body.light-theme .internship-card,
+body.light-theme .certification-card,
+body.light-theme .education-card-front,
+body.light-theme .education-card-back{
+
+  background:rgba(255,255,255,0.7);
+
+  color:#111827;
+}
+
+/* =========================
+   CIRCUIT BACKGROUND
+========================= */
+
+.circuit-bg{
+
+  position:fixed;
+
+  inset:0;
+
+  background-image:
+
+  linear-gradient(
+    rgba(0,229,255,0.05) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(0,229,255,0.05) 1px,
+    transparent 1px
+  );
+
+  background-size:40px 40px;
+
+  z-index:-2;
+
+  opacity:0.4;
+}
+
+/* =========================
+   PARTICLES
+========================= */
 
 body::before{
 
@@ -47,83 +90,103 @@ body::before{
   inset:0;
 
   background-image:
-
-  linear-gradient(
-    rgba(0,255,255,0.05) 1px,
-    transparent 1px
-  ),
-
-  linear-gradient(
-    90deg,
-    rgba(0,255,255,0.05) 1px,
-    transparent 1px
+  radial-gradient(
+    rgba(0,229,255,0.15) 2px,
+    transparent 2px
   );
 
-  background-size:45px 45px;
+  background-size:80px 80px;
+
+  animation:moveParticles 20s linear infinite;
 
   z-index:-3;
 }
 
-body::after{
+@keyframes moveParticles{
 
-  content:"";
+  100%{
+    transform:translateY(-80px);
+  }
 
-  position:fixed;
-
-  width:700px;
-  height:700px;
-
-  background:
-  radial-gradient(
-    circle,
-    rgba(0,255,255,0.18),
-    transparent 70%
-  );
-
-  top:-250px;
-  right:-250px;
-
-  filter:blur(120px);
-
-  z-index:-2;
 }
 
-/* =========================================
-   CURSOR GLOW
-========================================= */
+/* =========================
+   PRELOADER
+========================= */
 
-.cursor-glow{
-
+.preloader{
   position:fixed;
+  inset:0;
 
-  width:320px;
-  height:320px;
+  background:#050816;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+.loader{
+  width:80px;
+  height:80px;
 
   border-radius:50%;
 
+  border:6px solid rgba(255,255,255,0.1);
+
+  border-top:6px solid #00e5ff;
+
+  animation:spin 1s linear infinite;
+}
+
+.preloader.hide{
+  opacity:0;
+  visibility:hidden;
+
+  transition:1s ease;
+}
+
+@keyframes spin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================
+   CURSOR GLOW
+========================= */
+
+.cursor-glow{
+  position:fixed;
+
+  width:300px;
+  height:300px;
+
   background:
   radial-gradient(
     circle,
-    rgba(0,255,255,0.28),
-    rgba(123,97,255,0.12),
+    rgba(0,229,255,0.35),
+    rgba(123,97,255,0.15),
     transparent 70%
   );
 
-  transform:translate(-50%,-50%);
+  border-radius:50%;
 
   pointer-events:none;
 
-  filter:blur(45px);
+  transform:translate(-50%,-50%);
 
   z-index:-1;
+
+  filter:blur(30px);
 }
 
-/* =========================================
+/* =========================
    HEADER
-========================================= */
+========================= */
 
 .header{
-
   position:fixed;
 
   top:0;
@@ -134,105 +197,57 @@ body::after{
   padding:20px 10%;
 
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
 
-  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.05);
 
-  background:
-  rgba(5,8,22,0.55);
+  backdrop-filter:blur(15px);
 
   border-bottom:
-  1px solid rgba(0,255,255,0.08);
+  1px solid rgba(255,255,255,0.08);
 
   z-index:1000;
 }
 
 .logo{
-
-  font-family:'Orbitron',sans-serif;
-
-  font-size:1.7rem;
-
+  font-size:1.8rem;
   font-weight:700;
+
+  color:#00e5ff;
 
   text-decoration:none;
 
-  color:#00f5ff;
-
-  letter-spacing:2px;
-
   text-shadow:
-  0 0 12px rgba(0,245,255,0.8),
-  0 0 24px rgba(0,245,255,0.5);
+  0 0 10px rgba(0,229,255,0.8),
+  0 0 20px rgba(0,229,255,0.5);
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
-
 .navbar{
-
   display:flex;
-
-  gap:35px;
+  gap:30px;
 }
 
 .navbar a{
+  color:white;
 
   text-decoration:none;
 
-  color:#cbd5e1;
-
   font-weight:500;
-
-  position:relative;
 
   transition:0.3s ease;
 }
 
-.navbar a::after{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  bottom:-8px;
-
-  width:0%;
-  height:2px;
-
-  background:
-  linear-gradient(
-    90deg,
-    #00f5ff,
-    #7b61ff
-  );
-
-  transition:0.4s ease;
-}
-
 .navbar a:hover,
 .navbar a.active{
-
-  color:#00f5ff;
+  color:#00e5ff;
 }
 
-.navbar a:hover::after,
-.navbar a.active::after{
-
-  width:100%;
-}
-
-/* =========================================
+/* =========================
    THEME TOGGLE
-========================================= */
+========================= */
 
 .theme-toggle{
-
   width:55px;
   height:55px;
 
@@ -240,12 +255,11 @@ body::after{
 
   border-radius:50%;
 
-  background:
-  rgba(255,255,255,0.05);
+  background:rgba(255,255,255,0.08);
 
   color:white;
 
-  font-size:1.2rem;
+  font-size:1.3rem;
 
   cursor:pointer;
 
@@ -256,27 +270,24 @@ body::after{
 
 .theme-toggle:hover{
 
-  transform:rotate(180deg);
+  transform:rotate(180deg) scale(1.1);
 
   box-shadow:
-  0 0 25px rgba(0,255,255,0.5);
+  0 0 30px rgba(0,229,255,0.6);
 }
 
-/* =========================================
+/* =========================
    HOME SECTION
-========================================= */
+========================= */
 
 .home{
-
   min-height:100vh;
 
-  padding:120px 10%;
-
   display:flex;
-
   justify-content:center;
-
   align-items:center;
+
+  padding:120px 10%;
 }
 
 .home-content{
@@ -289,107 +300,94 @@ body::after{
 
   align-items:center;
 
-  gap:70px;
+  gap:60px;
 
   flex-wrap:wrap;
 }
 
-/* =========================================
-   HOME TEXT
-========================================= */
-
 .home-text{
-
   flex:1;
 }
 
 .home-text h3{
+  font-size:1.5rem;
 
-  color:#94a3b8;
-
-  font-size:1.3rem;
-
-  margin-bottom:10px;
+  color:#cbd5e1;
 }
 
 .home-text h1{
 
-  font-size:4.8rem;
+  font-size:4rem;
 
-  line-height:1.1;
+  line-height:1.2;
 
-  font-family:'Orbitron',sans-serif;
+  margin-top:10px;
 
   background:
   linear-gradient(
     90deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff,
-    #00ffb3
+    #00f7ff
   );
 
   -webkit-background-clip:text;
 
   -webkit-text-fill-color:transparent;
-
-  text-shadow:
-  0 0 25px rgba(0,255,255,0.25);
 }
 
 .ece-badge{
 
-  margin-top:20px;
+  margin-top:15px;
 
   display:inline-block;
 
-  padding:12px 24px;
+  padding:10px 20px;
 
   border-radius:50px;
 
   background:
-  rgba(0,255,255,0.08);
+  rgba(0,229,255,0.08);
 
   border:
-  1px solid rgba(0,255,255,0.18);
+  1px solid rgba(0,229,255,0.2);
 
-  color:#00f5ff;
+  color:#00e5ff;
 
   font-size:0.95rem;
-
-  backdrop-filter:blur(10px);
 }
 
 .typing-container{
 
-  margin-top:25px;
+  margin-top:20px;
 
-  font-size:1.5rem;
+  font-size:1.6rem;
 
   font-weight:600;
 }
 
 .typing-text{
-
-  color:#00f5ff;
+  color:#00e5ff;
 
   text-shadow:
-  0 0 15px rgba(0,255,255,0.8);
+  0 0 10px rgba(0,229,255,0.8),
+  0 0 20px rgba(0,229,255,0.5);
 }
 
 .home-text p{
 
-  margin-top:30px;
-
-  line-height:2;
+  margin-top:25px;
 
   color:#cbd5e1;
 
-  font-size:1.02rem;
+  line-height:1.9;
+
+  font-size:1.05rem;
 }
 
-/* =========================================
-   PROFILE IMAGE
-========================================= */
+/* =========================
+   HOME IMAGE
+========================= */
 
 .home-image{
 
@@ -406,57 +404,66 @@ body::after{
 
   position:relative;
 
-  padding:14px;
+  padding:12px;
 
   border-radius:50%;
 
   background:
   linear-gradient(
     45deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff,
-    #00ffb3
+    #00e5ff
   );
 
-  animation:
-  rotateRing 8s linear infinite;
-
   box-shadow:
-  0 0 50px rgba(0,255,255,0.3);
+  0 0 40px rgba(0,229,255,0.35),
+  0 0 80px rgba(123,97,255,0.25);
 }
 
-@keyframes rotateRing{
-
-  100%{
-    transform:rotate(360deg);
-  }
-
-}
 
 .profile-img{
 
   width:360px;
   height:360px;
 
-  border-radius:50%;
-
   object-fit:cover;
 
-  border:5px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+
+  border:4px solid rgba(255,255,255,0.15);
 
   background:#050816;
+
+  animation:
+  floatGlow 4s ease-in-out infinite;
 }
 
-/* =========================================
+@keyframes floatGlow{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* =========================
    BUTTONS
-========================================= */
+========================= */
 
 .home-buttons{
 
-  margin-top:40px;
+  margin-top:35px;
 
   display:flex;
-
   gap:20px;
 
   flex-wrap:wrap;
@@ -480,7 +487,7 @@ body::after{
   background:
   linear-gradient(
     90deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff
   );
 
@@ -492,18 +499,16 @@ body::after{
   transform:translateY(-5px);
 
   box-shadow:
-  0 0 35px rgba(0,255,255,0.5);
+  0 0 40px rgba(0,229,255,0.7);
 }
 
 .secondary-btn{
 
-  border:
-  1px solid rgba(255,255,255,0.15);
-
-  background:
-  rgba(255,255,255,0.05);
+  border:2px solid rgba(255,255,255,0.1);
 
   color:white;
+
+  background:rgba(255,255,255,0.05);
 }
 
 .secondary-btn:hover{
@@ -513,38 +518,36 @@ body::after{
   color:#050816;
 }
 
-/* =========================================
+/* =========================
    SOCIAL ICONS
-========================================= */
+========================= */
 
 .social-icons{
 
   margin-top:35px;
 
   display:flex;
-
   gap:20px;
 }
 
 .social-icons a{
 
-  width:58px;
-  height:58px;
+  width:55px;
+  height:55px;
 
   display:flex;
-
   justify-content:center;
-
   align-items:center;
 
   border-radius:50%;
 
-  background:
-  rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.08);
 
-  color:#00f5ff;
+  color:#00e5ff;
 
   font-size:1.4rem;
+
+  text-decoration:none;
 
   transition:0.4s ease;
 }
@@ -556,22 +559,18 @@ body::after{
   background:
   linear-gradient(
     135deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff
   );
 
   color:white;
-
-  box-shadow:
-  0 0 25px rgba(0,255,255,0.35);
 }
 
-/* =========================================
-   SECTIONS
-========================================= */
+/* =========================
+   COMMON SECTIONS
+========================= */
 
 section{
-
   padding:120px 10%;
 }
 
@@ -579,19 +578,18 @@ section{
 
   text-align:center;
 
-  margin-bottom:60px;
+  margin-bottom:30px;
 }
 
 .section-title h2{
 
   font-size:3rem;
 
-  font-family:'Orbitron',sans-serif;
-
-  color:#00f5ff;
+  color:#00e5ff;
 
   text-shadow:
-  0 0 15px rgba(0,255,255,0.5);
+  0 0 10px rgba(0,229,255,0.8),
+  0 0 20px rgba(0,229,255,0.5);
 }
 
 .section-title h2::after{
@@ -602,30 +600,180 @@ section{
 
   width:120px;
 
-  height:4px;
+  height:3px;
 
-  margin:18px auto;
-
-  border-radius:10px;
+  margin:15px auto;
 
   background:
   linear-gradient(
     90deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff
   );
+
+  border-radius:10px;
 }
 
-/* =========================================
+/* =========================
    GLASS CARDS
-========================================= */
+========================= */
 
 .about-card,
+.contact-info-card,
 .project-card,
 .skill-card,
-.contact-info-card,
+.internship-card,
+.certification-card{
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:25px;
+
+  transition:0.4s ease;
+}
+
+.about-card,
+.internship-card{
+  padding:40px;
+}
+
+.about-card:hover,
+.contact-info-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.timeline-content:hover,
+.certification-card:hover,
+.internship-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.25);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card p{
+
+  line-height:2;
+
+  color:#cbd5e1;
+
+  margin-bottom:20px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(200px,1fr));
+
+  gap:25px;
+}
+
+.skill-card{
+
+  padding:25px;
+
+  text-align:center;
+
+  font-weight:600;
+
+  border:
+  1px solid rgba(0,229,255,0.2);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,229,255,0.05),
+    rgba(123,97,255,0.08)
+  );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.section-subtitle{
+
+  text-align:center;
+
+  max-width:700px;
+
+  margin:auto;
+
+  margin-top:-10px;
+
+  margin-bottom:60px;
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+.education-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:40px;
+}
+
+.education-card{
+
+  perspective:1000px;
+
+  height:380px;
+}
+
+.education-card-inner{
+
+  position:relative;
+
+  width:100%;
+
+  height:100%;
+
+  transition:transform 0.8s;
+
+  transform-style:preserve-3d;
+}
+
+.education-card:hover .education-card-inner{
+
+  transform:rotateY(180deg);
+}
+
 .education-card-front,
 .education-card-back{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  backface-visibility:hidden;
+
+  border-radius:25px;
+
+  padding:40px;
 
   background:
   rgba(255,255,255,0.05);
@@ -633,87 +781,128 @@ section{
   border:
   1px solid rgba(255,255,255,0.08);
 
-  border-radius:25px;
+  backdrop-filter:blur(15px);
 
-  backdrop-filter:blur(18px);
+  display:flex;
 
-  transition:0.4s ease;
-}
+  flex-direction:column;
 
-.about-card,
-.contact-info-card{
+  justify-content:center;
 
-  padding:40px;
-}
-
-.about-card:hover,
-.project-card:hover,
-.skill-card:hover,
-.contact-info-card:hover{
-
-  transform:translateY(-10px);
-
-  box-shadow:
-  0 0 40px rgba(0,255,255,0.18);
-}
-
-/* =========================================
-   SKILLS
-========================================= */
-
-.skills-container{
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr));
-
-  gap:25px;
-}
-
-.skill-card{
-
-  padding:30px;
+  align-items:center;
 
   text-align:center;
-
-  font-weight:600;
-
-  position:relative;
-
-  overflow:hidden;
 }
 
-.skill-card::before{
+.education-card-back{
 
-  content:"";
+  transform:rotateY(180deg);
+}
+
+.education-icon img{
+
+  width:100px;
+
+  height:100px;
+
+  object-fit:contain;
+
+  border-radius:20px;
+
+  background:white;
+
+  padding:10px;
+
+  box-shadow:
+  0 0 20px rgba(0,229,255,0.25);
+}
+
+.education-badge{
 
   position:absolute;
 
-  top:0;
-  left:-100%;
+  top:20px;
+  right:20px;
 
-  width:100%;
-  height:3px;
+  padding:8px 16px;
+
+  border-radius:50px;
 
   background:
-  linear-gradient(
-    90deg,
-    #00f5ff,
-    #7b61ff
-  );
+  rgba(0,229,255,0.1);
 
-  transition:0.6s;
+  color:#00e5ff;
 }
 
-.skill-card:hover::before{
+.current-badge{
 
-  left:0;
+  background:
+  rgba(123,97,255,0.15);
+
+  color:#7b61ff;
 }
 
-/* =========================================
-   CONTACT
-========================================= */
+.education-stat{
+
+  margin-top:18px;
+}
+
+.education-stat span{
+
+  display:block;
+
+  color:#94a3b8;
+
+  margin-bottom:5px;
+}
+
+.education-stat strong{
+
+  color:white;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section{
+
+  padding:120px 10%;
+}
+
+.contact-grid{
+
+  display:flex;
+
+  justify-content:center;
+}
+
+.contact-info-card{
+
+  width:100%;
+
+  max-width:850px;
+
+  padding:50px;
+}
+
+.contact-card-title{
+
+  font-size:2rem;
+
+  color:#00e5ff;
+
+  margin-bottom:20px;
+}
+
+.contact-card-text{
+
+  color:#cbd5e1;
+
+  line-height:1.9;
+
+  margin-bottom:40px;
+}
 
 .contact-item{
 
@@ -726,6 +915,8 @@ section{
   padding:25px;
 
   border-radius:20px;
+
+  text-decoration:none;
 
   margin-bottom:20px;
 
@@ -743,7 +934,7 @@ section{
   transform:translateX(10px);
 
   border-color:
-  rgba(0,255,255,0.3);
+  rgba(0,229,255,0.25);
 }
 
 .contact-icon{
@@ -762,18 +953,45 @@ section{
   background:
   linear-gradient(
     135deg,
-    #00f5ff,
+    #00e5ff,
     #7b61ff
   );
 
+  color:white;
+
   font-size:1.5rem;
 
-  color:white;
+  flex-shrink:0;
 }
 
-/* =========================================
+.contact-details{
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+.contact-label{
+
+  color:#94a3b8;
+
+  margin-bottom:5px;
+
+  font-size:0.9rem;
+}
+
+.contact-value{
+
+  color:white;
+
+  font-size:1.05rem;
+
+  font-weight:500;
+}
+
+/* =========================
    FOOTER
-========================================= */
+========================= */
 
 footer{
 
@@ -787,9 +1005,9 @@ footer{
   color:#94a3b8;
 }
 
-/* =========================================
+/* =========================
    RESPONSIVE
-========================================= */
+========================= */
 
 @media(max-width:991px){
 
@@ -800,15 +1018,20 @@ footer{
     text-align:center;
   }
 
-  .home-buttons,
-  .social-icons{
+  .home-image{
+    width:100%;
+  }
 
+  .home-buttons{
+    justify-content:center;
+  }
+
+  .social-icons{
     justify-content:center;
   }
 
   .home-text h1{
-
-    font-size:3.2rem;
+    font-size:3rem;
   }
 
 }
@@ -816,40 +1039,29 @@ footer{
 @media(max-width:768px){
 
   .navbar{
-
     display:none;
   }
 
   .profile-img{
 
-    width:250px;
-    height:250px;
+    width:240px;
+    height:240px;
   }
 
   .section-title h2{
-
     font-size:2.2rem;
   }
 
-}
+  .education-card{
 
-@media(max-width:480px){
-
-  .home-text h1{
-
-    font-size:2.5rem;
+    height:350px;
   }
 
-  .btn{
-
-    width:100%;
-
-    text-align:center;
-  }
-
-  .home-buttons{
+  .contact-item{
 
     flex-direction:column;
+
+    text-align:center;
   }
 
 }
