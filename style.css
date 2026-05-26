@@ -400,7 +400,6 @@ body::before{
   align-items:center;
 }
 
-
 .profile-ring{
 
   position:relative;
@@ -421,6 +420,7 @@ body::before{
   0 0 40px rgba(0,229,255,0.35),
   0 0 80px rgba(123,97,255,0.25);
 }
+
 
 .profile-img{
 
