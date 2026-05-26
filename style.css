@@ -1006,3 +1006,206 @@ footer{
   }
 
 }
+
+/* ==========================================================
+   MODERN EDUCATION SECTION
+========================================================== */
+
+.education-section{
+
+  padding:120px 10%;
+}
+
+.section-subtitle{
+
+  text-align:center;
+
+  max-width:700px;
+
+  margin:auto;
+
+  margin-top:-30px;
+
+  margin-bottom:60px;
+
+  color:#cbd5e1;
+
+  line-height:1.8;
+}
+
+.education-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:40px;
+}
+
+.education-card{
+
+  perspective:1000px;
+
+  height:380px;
+}
+
+.education-card-inner{
+
+  position:relative;
+
+  width:100%;
+
+  height:100%;
+
+  transition:transform 0.8s;
+
+  transform-style:preserve-3d;
+}
+
+.education-card:hover .education-card-inner{
+
+  transform:rotateY(180deg);
+}
+
+.education-card-front,
+.education-card-back{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  backface-visibility:hidden;
+
+  border-radius:25px;
+
+  padding:40px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  box-shadow:
+  0 0 30px rgba(0,229,255,0.1);
+}
+
+.education-card-back{
+
+  transform:rotateY(180deg);
+}
+
+.education-icon{
+
+  font-size:4rem;
+
+  margin-bottom:25px;
+}
+
+.education-card h3{
+
+  color:#00e5ff;
+
+  margin-bottom:15px;
+
+  font-size:1.4rem;
+
+  text-shadow:
+  0 0 10px rgba(0,229,255,0.5);
+}
+
+.education-location{
+
+  color:#cbd5e1;
+
+  margin-bottom:20px;
+}
+
+.hover-hint{
+
+  margin-top:20px;
+
+  font-size:0.9rem;
+
+  color:#94a3b8;
+}
+
+.education-badge{
+
+  position:absolute;
+
+  top:20px;
+  right:20px;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  background:
+  rgba(0,229,255,0.1);
+
+  border:
+  1px solid rgba(0,229,255,0.2);
+
+  color:#00e5ff;
+
+  font-size:0.8rem;
+
+  font-weight:600;
+}
+
+.current-badge{
+
+  background:
+  rgba(123,97,255,0.15);
+
+  color:#7b61ff;
+}
+
+.education-stat{
+
+  margin-top:18px;
+}
+
+.education-stat span{
+
+  display:block;
+
+  color:#94a3b8;
+
+  margin-bottom:5px;
+}
+
+.education-stat strong{
+
+  color:white;
+
+  font-size:1.05rem;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+  .education-card{
+
+    height:350px;
+  }
+
+}
