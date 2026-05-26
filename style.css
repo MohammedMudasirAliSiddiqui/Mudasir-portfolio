@@ -3,6 +3,7 @@
 /* =========================
    GLOBAL STYLES
 ========================= */
+
 *{
   margin:0;
   padding:0;
@@ -82,9 +83,11 @@ body.light-theme .certification-card{
 }
 
 @keyframes spin{
+
   100%{
     transform:rotate(360deg);
   }
+
 }
 
 /* =========================
@@ -170,6 +173,7 @@ body.light-theme .certification-card{
 
 .navbar a:hover,
 .navbar a.active{
+
   color:#00e5ff;
 }
 
@@ -240,6 +244,7 @@ body.light-theme .certification-card{
 }
 
 .home-text h3{
+
   font-size:1.5rem;
 
   color:#cbd5e1;
@@ -578,27 +583,9 @@ section{
 
 .project-card{
 
-  background:rgba(255,255,255,0.05);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter:blur(15px);
-
-  border-radius:25px;
-
   overflow:hidden;
 
-  transition:0.4s ease;
-
   position:relative;
-}
-
-.project-card:hover{
-
-  transform:translateY(-10px);
-
-  box-shadow:
-  0 0 40px rgba(0,229,255,0.25);
 }
 
 .project-img{
@@ -676,6 +663,7 @@ section{
 
   color:#050816;
 }
+
 /* =========================
    EDUCATION TIMELINE
 ========================= */
