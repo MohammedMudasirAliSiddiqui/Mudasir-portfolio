@@ -416,16 +416,11 @@ body::before{
     #00e5ff
   );
 
-  animation:rotateRing 6s linear infinite;
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.35),
+  0 0 80px rgba(123,97,255,0.25);
 }
 
-@keyframes rotateRing{
-
-  100%{
-    transform:rotate(360deg);
-  }
-
-}
 
 .profile-img{
 
