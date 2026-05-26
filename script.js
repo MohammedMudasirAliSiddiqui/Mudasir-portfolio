@@ -1,6 +1,6 @@
-/* =========================
-   PRELOADER
-========================= */
+// =========================
+// PRELOADER
+// =========================
 
 window.addEventListener("load", () => {
 
@@ -15,9 +15,9 @@ window.addEventListener("load", () => {
 
 });
 
-/* =========================
-   TYPING ANIMATION
-========================= */
+// =========================
+// TYPING ANIMATION
+// =========================
 
 const words = [
 
@@ -57,15 +57,19 @@ function typeEffect(){
 
   let speed = isDeleting ? 60 : 120;
 
-  if(!isDeleting &&
-     charIndex === currentWord.length){
+  if(
+    !isDeleting &&
+    charIndex === currentWord.length
+  ){
 
-    speed = 3000;
+    speed = 2500;
 
     isDeleting = true;
 
-  }else if(isDeleting &&
-           charIndex === 0){
+  }else if(
+    isDeleting &&
+    charIndex === 0
+  ){
 
     isDeleting = false;
 
@@ -76,15 +80,15 @@ function typeEffect(){
 
   }
 
-  setTimeout(typeEffect,speed);
+  setTimeout(typeEffect, speed);
 
 }
 
 typeEffect();
 
-/* =========================
-   THEME TOGGLE
-========================= */
+// =========================
+// THEME TOGGLE
+// =========================
 
 const themeToggle =
   document.querySelector(".theme-toggle");
@@ -93,7 +97,11 @@ themeToggle.addEventListener("click",()=>{
 
   document.body.classList.toggle("light-theme");
 
-  if(document.body.classList.contains("light-theme")){
+  if(
+    document.body.classList.contains(
+      "light-theme"
+    )
+  ){
 
     themeToggle.innerHTML = "🌙";
 
@@ -105,26 +113,29 @@ themeToggle.addEventListener("click",()=>{
 
 });
 
-/* =========================
-   CURSOR GLOW EFFECT
-========================= */
+// =========================
+// CURSOR GLOW EFFECT
+// =========================
 
 const cursorGlow =
   document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove",(e)=>{
+document.addEventListener(
+  "mousemove",
+  (e)=>{
 
-  cursorGlow.style.left =
-    `${e.clientX}px`;
+    cursorGlow.style.left =
+      `${e.clientX}px`;
 
-  cursorGlow.style.top =
-    `${e.clientY}px`;
+    cursorGlow.style.top =
+      `${e.clientY}px`;
 
-});
+  }
+);
 
-/* =========================
-   ACTIVE NAVBAR LINKS
-========================= */
+// =========================
+// ACTIVE NAVBAR LINKS
+// =========================
 
 const sections =
   document.querySelectorAll("section");
@@ -141,10 +152,9 @@ window.addEventListener("scroll",()=>{
     const sectionTop =
       section.offsetTop;
 
-    const sectionHeight =
-      section.clientHeight;
-
-    if(scrollY >= sectionTop - 200){
+    if(
+      scrollY >= sectionTop - 200
+    ){
 
       current =
         section.getAttribute("id");
@@ -170,9 +180,9 @@ window.addEventListener("scroll",()=>{
 
 });
 
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
+// =========================
+// SCROLL REVEAL ANIMATION
+// =========================
 
 const revealElements =
   document.querySelectorAll(
@@ -181,12 +191,12 @@ const revealElements =
      .skill-card,\
      .project-card,\
      .contact-card,\
-     .education-card,\
+     .timeline-content,\
      .certification-card,\
-     .achievement-card,\
      .internship-card"
 
   );
+
 function revealOnScroll(){
 
   revealElements.forEach((element)=>{
@@ -199,7 +209,10 @@ function revealOnScroll(){
 
     const revealPoint = 100;
 
-    if(revealTop < windowHeight - revealPoint){
+    if(
+      revealTop <
+      windowHeight - revealPoint
+    ){
 
       element.classList.add("show");
 
@@ -216,67 +229,71 @@ window.addEventListener(
 
 revealOnScroll();
 
-/* =========================
-   FLOATING IMAGE EFFECT
-========================= */
+// =========================
+// FLOATING IMAGE EFFECT
+// =========================
 
 const profileImage =
   document.querySelector(".home-image img");
 
-profileImage.addEventListener(
-  "mousemove",
-  (e)=>{
+if(profileImage){
 
-    const rect =
-      profileImage.getBoundingClientRect();
+  profileImage.addEventListener(
+    "mousemove",
+    (e)=>{
 
-    const x =
-      e.clientX - rect.left;
+      const rect =
+        profileImage.getBoundingClientRect();
 
-    const y =
-      e.clientY - rect.top;
+      const x =
+        e.clientX - rect.left;
 
-    const centerX =
-      rect.width / 2;
+      const y =
+        e.clientY - rect.top;
 
-    const centerY =
-      rect.height / 2;
+      const centerX =
+        rect.width / 2;
 
-    const rotateX =
-      -(y - centerY) / 15;
+      const centerY =
+        rect.height / 2;
 
-    const rotateY =
-      (x - centerX) / 15;
+      const rotateX =
+        -(y - centerY) / 15;
 
-    profileImage.style.transform =
+      const rotateY =
+        (x - centerX) / 15;
 
-      `perspective(1000px)
-       rotateX(${rotateX}deg)
-       rotateY(${rotateY}deg)
-       scale(1.05)`;
+      profileImage.style.transform =
 
-  }
+        `perspective(1000px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         scale(1.05)`;
 
-);
+    }
 
-profileImage.addEventListener(
-  "mouseleave",
-  ()=>{
+  );
 
-    profileImage.style.transform =
+  profileImage.addEventListener(
+    "mouseleave",
+    ()=>{
 
-      `perspective(1000px)
-       rotateX(0deg)
-       rotateY(0deg)
-       scale(1)`;
+      profileImage.style.transform =
 
-  }
+        `perspective(1000px)
+         rotateX(0deg)
+         rotateY(0deg)
+         scale(1)`;
 
-);
+    }
 
-/* =========================
-   SMOOTH SCROLL
-========================= */
+  );
+
+}
+
+// =========================
+// SMOOTH SCROLL
+// =========================
 
 document.querySelectorAll(
 
