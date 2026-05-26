@@ -877,31 +877,195 @@ section{
   font-weight:600;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* ==========================================================
+   PREMIUM CONTACT SECTION
+========================================================== */
 
-.contact-card{
+.contact-section{
 
-  text-align:center;
+  padding:120px 10%;
 }
 
-.contact-card h3{
+.section-header{
+
+  text-align:center;
+
+  margin-bottom:70px;
+}
+
+.contact-grid{
+
+  display:flex;
+
+  justify-content:center;
+}
+
+.contact-info-card{
+
+  width:100%;
+
+  max-width:850px;
+
+  padding:50px;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.12);
+
+  transition:0.4s ease;
+}
+
+.contact-info-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 0 50px rgba(0,229,255,0.2);
+}
+
+.contact-card-title{
 
   font-size:2rem;
 
-  margin-bottom:20px;
-
   color:#00e5ff;
-}
-
-.contact-card p{
 
   margin-bottom:20px;
 
-  font-size:1.1rem;
+  text-shadow:
+  0 0 15px rgba(0,229,255,0.4);
 }
 
+.contact-card-text{
+
+  color:#cbd5e1;
+
+  line-height:1.9;
+
+  margin-bottom:40px;
+}
+
+.contact-items{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:25px;
+}
+
+.contact-item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  text-decoration:none;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  transition:0.4s ease;
+}
+
+.contact-item:hover{
+
+  transform:translateX(10px);
+
+  border-color:
+  rgba(0,229,255,0.25);
+
+  box-shadow:
+  0 0 25px rgba(0,229,255,0.15);
+}
+
+.contact-icon{
+
+  width:65px;
+  height:65px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #00e5ff,
+    #7b61ff
+  );
+
+  color:white;
+
+  font-size:1.5rem;
+
+  flex-shrink:0;
+}
+
+.contact-details{
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+.contact-label{
+
+  color:#94a3b8;
+
+  margin-bottom:6px;
+
+  font-size:0.9rem;
+}
+
+.contact-value{
+
+  color:white;
+
+  font-size:1.05rem;
+
+  font-weight:500;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+  .contact-info-card{
+
+    padding:30px;
+  }
+
+  .contact-item{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+}
 /* =========================
    FOOTER
 ========================= */
