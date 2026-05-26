@@ -1197,6 +1197,24 @@ footer{
   font-size:1.05rem;
 }
 
+.education-icon img{
+
+  width:100px;
+
+  height:100px;
+
+  object-fit:contain;
+
+  border-radius:20px;
+
+  background:white;
+
+  padding:10px;
+
+  box-shadow:
+  0 0 20px rgba(0,229,255,0.25);
+}
+
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
