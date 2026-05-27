@@ -1357,3 +1357,479 @@ footer{
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   PREMIUM ANIMATIONS UPGRADE
+   ADD THIS AT THE END OF CSS
+========================================================== */
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(0,229,255,0.08),
+    transparent 35%
+  ),
+  radial-gradient(
+    circle at bottom right,
+    rgba(123,97,255,0.08),
+    transparent 35%
+  );
+
+  animation:
+  backgroundPulse 8s ease-in-out infinite;
+
+  z-index:-2;
+}
+
+@keyframes backgroundPulse{
+
+  0%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+  50%{
+    transform:scale(1.05);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+}
+
+/* =========================
+   SECTION FADE ANIMATION
+========================= */
+
+section{
+
+  animation:
+  fadeSection 1s ease;
+}
+
+@keyframes fadeSection{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =========================
+   HEADER GLOW
+========================= */
+
+.header{
+
+  animation:
+  headerGlow 5s infinite alternate;
+}
+
+@keyframes headerGlow{
+
+  0%{
+
+    box-shadow:
+    0 0 0px rgba(0,229,255,0);
+  }
+
+  100%{
+
+    box-shadow:
+    0 0 20px rgba(0,229,255,0.15);
+  }
+
+}
+
+/* =========================
+   LOGO ELECTRIC EFFECT
+========================= */
+
+.logo{
+
+  position:relative;
+
+  animation:
+  logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow{
+
+  from{
+
+    text-shadow:
+    0 0 5px rgba(0,229,255,0.3);
+  }
+
+  to{
+
+    text-shadow:
+    0 0 20px rgba(0,229,255,0.8),
+    0 0 40px rgba(0,229,255,0.4);
+  }
+
+}
+
+/* =========================
+   NAVBAR HOVER EFFECT
+========================= */
+
+.navbar a{
+
+  position:relative;
+}
+
+.navbar a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:2px;
+
+  background:#00e5ff;
+
+  transition:0.4s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after{
+
+  width:100%;
+}
+
+/* =========================
+   HERO TEXT ANIMATION
+========================= */
+
+.home-text h1{
+
+  animation:
+  gradientFlow 6s linear infinite;
+}
+
+@keyframes gradientFlow{
+
+  0%{
+    filter:hue-rotate(0deg);
+  }
+
+  100%{
+    filter:hue-rotate(360deg);
+  }
+
+}
+
+/* =========================
+   PROFILE IMAGE EFFECT
+========================= */
+
+.profile-img{
+
+  position:relative;
+
+  animation:
+  floatGlow 4s ease-in-out infinite,
+  imagePulse 3s ease-in-out infinite;
+}
+
+@keyframes imagePulse{
+
+  0%{
+
+    box-shadow:
+    0 0 30px rgba(0,229,255,0.2),
+    0 0 80px rgba(123,97,255,0.15);
+  }
+
+  50%{
+
+    box-shadow:
+    0 0 60px rgba(0,229,255,0.45),
+    0 0 120px rgba(123,97,255,0.3);
+  }
+
+  100%{
+
+    box-shadow:
+    0 0 30px rgba(0,229,255,0.2),
+    0 0 80px rgba(123,97,255,0.15);
+  }
+
+}
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+.btn{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  transition:0.6s ease;
+}
+
+.btn:hover::before{
+
+  left:100%;
+}
+
+/* =========================
+   SKILL CARD ANIMATION
+========================= */
+
+.skill-card{
+
+  animation:
+  skillFloat 4s ease-in-out infinite;
+}
+
+.skill-card:nth-child(2){
+
+  animation-delay:0.5s;
+}
+
+.skill-card:nth-child(3){
+
+  animation-delay:1s;
+}
+
+.skill-card:nth-child(4){
+
+  animation-delay:1.5s;
+}
+
+@keyframes skillFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* =========================
+   PROJECT IMAGE GLOW
+========================= */
+
+.modern-project-image img{
+
+  position:relative;
+}
+
+.modern-project-image img:hover{
+
+  transform:scale(1.04);
+
+  box-shadow:
+  0 0 70px rgba(0,229,255,0.4),
+  0 0 120px rgba(123,97,255,0.25);
+}
+
+/* =========================
+   EDUCATION CARD EFFECT
+========================= */
+
+.education-card{
+
+  animation:
+  educationFloat 5s ease-in-out infinite;
+}
+
+@keyframes educationFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* =========================
+   CONTACT CARD GLOW
+========================= */
+
+.contact-info-card{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.contact-info-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-50%;
+  left:-50%;
+
+  width:200%;
+  height:200%;
+
+  background:
+  linear-gradient(
+    45deg,
+    transparent,
+    rgba(0,229,255,0.05),
+    transparent
+  );
+
+  transform:rotate(25deg);
+
+  animation:
+  contactShine 6s linear infinite;
+}
+
+@keyframes contactShine{
+
+  0%{
+    transform:
+    translateX(-100%)
+    rotate(25deg);
+  }
+
+  100%{
+    transform:
+    translateX(100%)
+    rotate(25deg);
+  }
+
+}
+
+/* =========================
+   FOOTER GLOW
+========================= */
+
+footer{
+
+  position:relative;
+}
+
+footer::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:200px;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    #00e5ff,
+    transparent
+  );
+
+  animation:
+  footerGlow 3s linear infinite;
+}
+
+@keyframes footerGlow{
+
+  0%{
+    opacity:0.3;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0.3;
+  }
+
+}
