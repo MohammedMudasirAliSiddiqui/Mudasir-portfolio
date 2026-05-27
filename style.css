@@ -720,3 +720,378 @@ section{
 
   border-radius:20px;
 }
+
+
+
+/* ==========================================================
+   EXTRA PREMIUM IMPROVEMENTS
+   ADD THIS AT THE END OF YOUR CSS
+========================================================== */
+
+/* =========================
+   BETTER SKILL SPACING
+========================= */
+
+.skills-category{
+
+  margin-bottom:60px;
+}
+
+.skills-heading{
+
+  margin-bottom:35px;
+}
+
+/* =========================
+   HOME SECTION ALIGNMENT
+========================= */
+
+.home-content{
+
+  align-items:flex-start;
+}
+
+.home-image{
+
+  padding-top:40px;
+}
+
+/* =========================
+   PREMIUM PROJECT CARDS
+========================= */
+
+.modern-project-card{
+
+  padding:30px;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,0.03);
+
+  border:
+  1px solid rgba(0,229,255,0.08);
+
+  transition:0.4s ease;
+}
+
+.modern-project-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.12);
+}
+
+/* =========================
+   PROJECT IMAGE ENHANCEMENT
+========================= */
+
+.modern-project-image img{
+
+  width:100%;
+
+  height:350px;
+
+  object-fit:cover;
+
+  border-radius:25px;
+
+  border:
+  1px solid rgba(0,229,255,0.12);
+
+  box-shadow:
+  0 0 30px rgba(0,229,255,0.12);
+
+  transition:0.4s ease;
+}
+
+.modern-project-image img:hover{
+
+  transform:scale(1.03);
+
+  box-shadow:
+  0 0 60px rgba(0,229,255,0.25);
+}
+
+/* =========================
+   ELECTRONICS GLOW ANIMATION
+========================= */
+
+@keyframes pulseGlow{
+
+  0%{
+
+    box-shadow:
+    0 0 10px rgba(0,229,255,0.12);
+
+  }
+
+  50%{
+
+    box-shadow:
+    0 0 25px rgba(0,229,255,0.28);
+
+  }
+
+  100%{
+
+    box-shadow:
+    0 0 10px rgba(0,229,255,0.12);
+
+  }
+
+}
+
+/* =========================
+   GLOW EFFECT COMPONENTS
+========================= */
+
+.skill-card,
+.contact-item,
+.education-card-front{
+
+  animation:
+  pulseGlow 4s infinite;
+}
+
+/* =========================
+   BUTTON IMPROVEMENTS
+========================= */
+
+.primary-btn{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.primary-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:
+  linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  transition:0.6s ease;
+}
+
+.primary-btn:hover::before{
+
+  left:100%;
+}
+
+/* =========================
+   RESUME BUTTON GLOW
+========================= */
+
+.secondary-btn:hover{
+
+  background:white;
+
+  color:#050816;
+
+  box-shadow:
+  0 0 25px rgba(255,255,255,0.35);
+}
+
+/* =========================
+   BETTER CONTACT CARD
+========================= */
+
+.contact-info-card{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.contact-info-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,229,255,0.04),
+    transparent,
+    rgba(123,97,255,0.04)
+  );
+
+  pointer-events:none;
+}
+
+/* =========================
+   EDUCATION CARD EFFECT
+========================= */
+
+.education-card-front,
+.education-card-back{
+
+  transition:
+  transform 0.8s ease,
+  box-shadow 0.4s ease;
+}
+
+.education-card:hover
+.education-card-front{
+
+  box-shadow:
+  0 0 40px rgba(0,229,255,0.2);
+}
+
+/* =========================
+   SOCIAL ICON IMPROVEMENT
+========================= */
+
+.social-icons a{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.social-icons a::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+
+  opacity:0;
+
+  transition:0.4s ease;
+}
+
+.social-icons a:hover::before{
+
+  opacity:1;
+}
+
+/* =========================
+   NAVBAR PREMIUM EFFECT
+========================= */
+
+.navbar a{
+
+  position:relative;
+}
+
+.navbar a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0;
+  height:2px;
+
+  background:#00e5ff;
+
+  transition:0.4s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after{
+
+  width:100%;
+}
+
+/* =========================
+   FOOTER ENHANCEMENT
+========================= */
+
+footer{
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+footer::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:200px;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    #00e5ff,
+    transparent
+  );
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .home-content{
+
+    align-items:center;
+  }
+
+  .home-image{
+
+    padding-top:0;
+  }
+
+  .modern-project-card{
+
+    padding:20px;
+  }
+
+  .modern-project-image img{
+
+    height:250px;
+  }
+
+  .skills-heading{
+
+    text-align:center;
+
+    border-left:none;
+
+    padding-left:0;
+  }
+
+}
