@@ -588,8 +588,38 @@ section{
 }
 
 /* =========================
-   SKILLS
+   SKILLS NEW DESIGN
 ========================= */
+
+.skills-wrapper{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:50px;
+}
+
+.skills-category{
+
+  width:100%;
+}
+
+.skills-heading{
+
+  font-size:1.7rem;
+
+  color:#00e5ff;
+
+  margin-bottom:25px;
+
+  padding-left:10px;
+
+  border-left:4px solid #00e5ff;
+
+  text-shadow:
+  0 0 12px rgba(0,229,255,0.5);
+}
 
 .skills-container{
 
@@ -603,11 +633,60 @@ section{
 
 .skill-card{
 
-  padding:25px;
+  padding:22px;
 
   text-align:center;
 
   font-weight:600;
+
+  border-radius:20px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(0,229,255,0.15);
+
+  transition:0.4s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.skill-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,229,255,0.08),
+    rgba(123,97,255,0.08)
+  );
+
+  opacity:0;
+
+  transition:0.4s ease;
+}
+
+.skill-card:hover::before{
+
+  opacity:1;
+}
+
+.skill-card:hover{
+
+  transform:translateY(-8px);
+
+  border-color:#00e5ff;
+
+  box-shadow:
+  0 0 25px rgba(0,229,255,0.2);
 }
 
 /* =========================
