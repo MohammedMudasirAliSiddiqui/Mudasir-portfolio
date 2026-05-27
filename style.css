@@ -949,9 +949,10 @@ section{
 
   flex-direction:column;
 
-  gap:100px;
-}
+  gap:160px;
 
+  margin-top:40px;
+}
 .modern-project-card{
 
   display:flex;
@@ -965,6 +966,14 @@ section{
   flex-wrap:wrap;
 
   transition:0.4s ease;
+}
+
+.modern-project-card{
+
+  padding-bottom:40px;
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.06);
 }
 
 .modern-project-card:hover{
