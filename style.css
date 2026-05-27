@@ -1546,27 +1546,7 @@ section{
   width:100%;
 }
 
-/* =========================
-   HERO TEXT ANIMATION
-========================= */
 
-.home-text h1{
-
-  animation:
-  gradientFlow 6s linear infinite;
-}
-
-@keyframes gradientFlow{
-
-  0%{
-    filter:hue-rotate(0deg);
-  }
-
-  100%{
-    filter:hue-rotate(360deg);
-  }
-
-}
 
 /* =========================
    PROFILE IMAGE EFFECT
